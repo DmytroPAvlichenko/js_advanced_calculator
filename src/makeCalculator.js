@@ -10,7 +10,7 @@ function makeCalculator() {
     add: (a, b) => a + b,
     subtract: (a, b) => a - b,
     multiply: (a, b) => a * b,
-    divide: (a, b) => a / b,
+    divide: (a, b) => (b !== 0 ? a / b : 0),
 
     operate(callback, number) {
       this.result = callback(this.result, number);
